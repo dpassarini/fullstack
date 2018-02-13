@@ -1,0 +1,38 @@
+<div class="navbar-fixed">
+
+  <nav  role="navigation">
+
+<div class="nav-wrapper blue " id="unauthenticated" *ngIf="!isAuthenticated">
+      <a [routerLink]="['']" id="logo-container" class="brand-logo">Account manager</a>
+
+      <ul class="right hide-on-med-and-down">
+        <li> <a (click)="presentAuthDialog()" >Login</a></li>
+        <li> <a (click)="presentAuthDialog('register')">Register</a></li>
+      </ul>
+      
+
+    </div>
+
+    <div class="nav-wrapper blue " id="authenticated" *ngIf="isAuthenticated">
+        <a [routerLink]="['']" id="logo-container" class="brand-logo">Account manager</a>
+  
+        <ul class="right hide-on-med-and-down">
+  
+          <li> <a routerLink="/create-account" >Create Account</a></li>
+          <li> <a routerLink="/create-transfer" >Transfer Value</a></li>
+          <li> <a routerLink="/create-charge" >Charge Account</a></li>
+          <li> <a (click)="presentAuthDialog()" >Login</a></li>
+          <li> <a (click)="presentAuthDialog('register')">Register</a></li>
+  
+          <li> <a routerLink="/logout">LOGOUT</a></li>
+  
+        </ul>
+        
+  
+      </div>
+
+  </nav>
+  
+</div>
+
+<app-auth-dialog #authDialog></app-auth-dialog>

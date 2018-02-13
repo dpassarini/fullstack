@@ -1,0 +1,42 @@
+mysql/
+redis/
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+apps/account-frontend/dist
+apps/account-frontend/dist-server
+apps/account-frontend/tmp
+apps/account-frontend/out-tsc
+
+# dependencies
+apps/account-frontend/node_modules
+
+# IDEs and editors
+apps/account-frontend/.idea
+apps/account-frontend/.project
+apps/account-frontend/.classpath
+apps/account-frontend/.c9/
+apps/account-frontend/*.launch
+apps/account-frontend/.settings/
+apps/account-frontend/*.sublime-workspace
+
+# IDE - VSCode
+apps/account-frontend/.vscode/*
+
+# misc
+apps/account-frontend/.sass-cache
+apps/account-frontend/connect.lock
+apps/account-frontend/coverage
+apps/account-frontend/libpeerconnection.log
+apps/account-frontend/npm-debug.log
+apps/account-frontend/testem.log
+apps/account-frontend/typings
+
+# e2e
+apps/account-frontend/e2e/*.js
+apps/account-frontend/e2e/*.map
+
+# System Files
+apps/account-frontend/.DS_Store
+apps/account-frontend/Thumbs.db

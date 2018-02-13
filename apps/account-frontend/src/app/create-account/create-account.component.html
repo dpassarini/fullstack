@@ -1,0 +1,29 @@
+
+<form (ngSubmit)="onSubmit()">
+  
+
+    <div class="row">
+      <label class="col-md-4 control-label" for="">Parent Account ID: </label>
+      <div class="col-md-8">
+          <input type="text" style="width: 300px" class="form-control" required
+              [(ngModel)]="account.parent_account_id" name="accountParentAccountId">
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="col-md-4 control-label" for="">Account name: </label>
+      <div class="col-md-8">
+          <input type="text" style="width: 300px" class="form-control" required
+              [(ngModel)]="account.name" name="accountName">
+      </div>
+    </div>
+    
+
+
+    <div class="row">
+      <div class="col-md-4">
+        <input type="submit" value="Create" />
+      </div>
+    </div>
+
+</form>

@@ -1,0 +1,102 @@
+<div class="modal" materialize="modal" [materializeActions]="modalActions">
+
+
+  <div class="modal-content">
+
+    <div class="row">
+
+      <div class="row">
+
+        <span class="modal-close right">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </span>
+      </div>
+      
+      <div class="row" id="error-message">
+        {{errorMessage}}
+      </div>
+
+
+      <div class="row">
+        <div *ngIf="isLoginMode()">
+          <form (ngSubmit)="onSubmitLogin()">
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Email: </label>
+              <div class="col-xs-8">
+                  <input type="text" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.email" name="userEmail">
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Senha: </label>
+              <div class="col-xs-8">
+                  <input type="password" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.password" name="userPassword">
+              </div>
+            </div>
+            
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Grant type: </label>
+              <div class="col-xs-8">
+                  <input type="hidden" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.grant_type" name="userGrantType" [value]="password" >
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <input type="submit" value="Create" />
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div *ngIf="isRegisterMode()">
+          <form (ngSubmit)="onSubmitRegister()">
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Email: </label>
+              <div class="col-xs-8">
+                  <input type="text" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.email" name="userEmail">
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Document: </label>
+              <div class="col-xs-8">
+                  <input type="text" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.document" name="userDocument">
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Password: </label>
+              <div class="col-xs-8">
+                  <input type="password" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.password" name="userPassword">
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-xs-4 control-label" for="">Password: </label>
+              <div class="col-xs-8">
+                  <input type="password" style="width: 300px" class="form-control" required
+                      [(ngModel)]="user.password_confirmation" name="userPasswordConfirmation">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4">
+                <input type="submit" value="Create" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

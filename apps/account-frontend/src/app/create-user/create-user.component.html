@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <div class="row">
+      <label class="col-xs-4 control-label" for="">Email: </label>
+      <div class="col-xs-8">
+          <input type="text" style="width: 300px" class="form-control" required
+              [(ngModel)]="user.email" name="userEmail">
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="col-xs-4 control-label" for="">Document: </label>
+      <div class="col-xs-8">
+          <input type="text" style="width: 300px" class="form-control" required
+              [(ngModel)]="user.document" name="userDocument">
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="col-xs-4 control-label" for="">Password: </label>
+      <div class="col-xs-8">
+          <input type="password" style="width: 300px" class="form-control" required
+              [(ngModel)]="user.password" name="userPassword">
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="col-xs-4 control-label" for="">Password confirmation: </label>
+      <div class="col-xs-8">
+          <input type="password" style="width: 300px" class="form-control" required
+              [(ngModel)]="user.password_confirmation" name="userPasswordConfirmation">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <input type="submit" value="Create" />
+      </div>
+    </div>
+  </div>
+</form>

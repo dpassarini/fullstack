@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <div class="row">
+      <label class="col-xs-4 control-label" for="">Receiver: </label>
+      <div class="col-xs-8">
+          <input type="text" style="width: 300px" class="form-control" required
+              [(ngModel)]="transfer.receiver_account_id" name="transferReceiverAccountId">
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="col-xs-4 control-label" for="">Value: </label>
+      <div class="col-xs-8">
+          <input type="text" style="width: 300px" class="form-control" required
+              [(ngModel)]="transfer.value_cents" name="transferValueCents">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <input type="submit" value="Create" />
+      </div>
+    </div>
+  </div>
+</form>
