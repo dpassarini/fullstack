@@ -23,6 +23,7 @@ apps/account-frontend/*.sublime-workspace
 
 # IDE - VSCode
 apps/account-frontend/.vscode/*
+.vscode
 
 # misc
 apps/account-frontend/.sass-cache
